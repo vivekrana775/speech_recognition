@@ -1,0 +1,103 @@
+#root {
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.app_container{
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #01002d;
+}
+
+.container{
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.transcript_container{
+  height: 80%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.button_container{
+  height: 20%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start_button{
+
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  background-color: #2ba3d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+.on_off_img{
+  object-fit: contain;
+  height: 50%;
+  width: auto;
+}
+
+.outer_circle {
+  width: 70px;
+  height: 70px;
+  border: 3px solid #461f64; 
+  border-radius: 35px; 
+  background-color: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+
+
+

@@ -1,15 +1,17 @@
-import React from "react";
-import on from "/on.png";
-import off from "/off.png";
-const StopTranscription = ({ transcription, handleTranscription }) => {
+const HandleTranscription = ({
+  Start_Stop,
+  mic,
+  transcription,
+  handleTranscription,
+}) => {
   return (
     <div className="transcript_container">
       <p>{transcription}</p>
       <div className="button_container">
-        Press here to stop
+        Press here to {Start_Stop}
         <div className="outer_circle">
           <div className="start_button" onClick={handleTranscription}>
-            <img className="on_off_img" src={off} alt="mic off" />
+            <img className="on_off_img" src={mic} alt="mic off" />
           </div>
         </div>
       </div>
@@ -17,4 +19,4 @@ const StopTranscription = ({ transcription, handleTranscription }) => {
   );
 };
 
-export default StopTranscription;
+export default HandleTranscription;

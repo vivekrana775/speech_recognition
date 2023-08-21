@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import StartTranscription from "../components/StartTranscription";
-import StopTranscription from "../components/StopTranscription";
+import HandleTranscription from "../components/HandleTranscription";
+import on from "/on.png";
+import off from "/off.png";
 
 const TranscribingScreen = () => {
   const [transcription, setTranscription] = useState("");
@@ -18,29 +19,6 @@ const TranscribingScreen = () => {
     console.log(spokenText);
   };
 
-  recognition.onspeechend = () => {
-    console.log("Speech recognition has stopped.");
-  };
-
-  recognition.onaudioend = () => {
-    console.log("audio end");
-  };
-
-  recognition.onsoundend = (event) => {
-    console.log("Sound has stopped being received");
-  };
-
-  recognition.onend = () => {
-    console.log("Speech recognition service disconnected");
-  };
-
-  recognition.onerror = (event) => {
-    console.error(`Speech recognition error detected: ${event.error}`);
-  };
-
-  recognition.onspeechend = () => {
-    console.log("Speech has stopped being detected");
-  };
   const startTranscription = () => {
     setIsVoiceRecognitionStarted(true);
     recognition.start();
@@ -56,12 +34,16 @@ const TranscribingScreen = () => {
   return (
     <div className="container">
       {isVoiceRecognitionStarted ? (
-        <StopTranscription
+        <HandleTranscription
+          Start_Stop={"Stop"}
+          mic={on}
           transcription={transcription}
           handleTranscription={stopTranscription}
         />
       ) : (
-        <StopTranscription
+        <HandleTranscription
+          Start_Stop={"Start"}
+          mic={off}
           transcription={"Trancript of voice will show here..."}
           handleTranscription={startTranscription}
         />

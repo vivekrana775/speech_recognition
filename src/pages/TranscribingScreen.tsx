@@ -58,10 +58,13 @@ const TranscribingScreen = () => {
       {isVoiceRecognitionStarted ? (
         <StopTranscription
           transcription={transcription}
-          stopTranscription={stopTranscription}
+          handleTranscription={stopTranscription}
         />
       ) : (
-        <StartTranscription startTranscription={startTranscription} />
+        <StopTranscription
+          transcription={"Trancript of voice will show here..."}
+          handleTranscription={startTranscription}
+        />
       )}
     </div>
   );
